@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Ramona';
+  src: url('/fonts/Ramona Light 300.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ramona';
+  src: url('/fonts/Ramona Bold 700.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alte Haas Grotesk';
+  src: url('/fonts/AlteHaasGroteskRegular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alte Haas Grotesk';
+  src: url('/fonts/AlteHaasGroteskBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  /* Designer's palette - extracted from skeleton PDF */
+  --color-brand-red: #D41F24;
+  --color-brand-red-dark: #B81A1E;
+  --color-brand-red-light: #EA9698;
+  --color-brand-red-pale: #FAE7E7;
+  --color-brand-dark: #231F20;
+  --color-brand-gray: #414042;
+  --color-brand-gray-mid: #58595B;
+  --color-brand-gray-light: #7C7C7C;
+  --color-brand-cream: #FEFAFA;
+  --color-brand-white: #FFFFFF;
+
+  --font-heading: 'Ramona', Georgia, serif;
+  --font-body: 'Alte Haas Grotesk', 'Helvetica Neue', Arial, sans-serif;
+
+  --animate-fade-up: fade-up 0.8s ease-out both;
+  --animate-fade-in: fade-in 1s ease-out both;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-brand-dark);
+  background-color: var(--color-brand-white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+::selection {
+  background-color: var(--color-brand-red);
+  color: white;
+}
+
+/* Scroll-triggered animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Card hover lift */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* Red underline accent */
+.red-underline {
+  position: relative;
+  display: inline-block;
+}
+.red-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--color-brand-red);
+  border-radius: 2px;
+}
+
+/* Quote styling */
+.quote-mark::before {
+  content: '\201C';
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--color-brand-red);
+  opacity: 0.2;
+  position: absolute;
+  top: -10px;
+  left: -5px;
+  font-family: Georgia, serif;
+}
