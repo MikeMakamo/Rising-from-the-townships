@@ -277,16 +277,6 @@ export function getEntrepreneurBySlug(slug) {
   return entrepreneurs.find((entrepreneur) => entrepreneur.slug === slug);
 }
 
-export function getBookingHref(entrepreneur) {
-  const params = new URLSearchParams({
-    subject: 'Book an Entrepreneur',
-    entrepreneur: entrepreneur.name,
-    company: entrepreneur.company,
-  });
-
-  return `/contact?${params.toString()}`;
-}
-
 export function filterEntrepreneurs(activeFilter) {
   if (activeFilter === 'All') {
     return entrepreneurs;

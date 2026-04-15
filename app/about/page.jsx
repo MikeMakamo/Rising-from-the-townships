@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import InquiryModalTrigger from '../components/InquiryModalTrigger';
 
 export const metadata = {
   title: 'About Us',
@@ -392,12 +393,15 @@ export default function AboutPage() {
             >
               Meet Our Entrepreneurs
             </Link>
-            <Link
-              href="/contact"
+            <InquiryModalTrigger
+              label="Get In Touch"
+              subject="Partnership"
+              recipient="info"
+              modalTitle="Discuss a Partnership Opportunity"
+              modalDescription="Tell us a little about your institution, audience, or opportunity and we will respond with the right next step."
+              defaultMessage="I would like to discuss a possible partnership opportunity with RFTT."
               className="px-8 py-4 border-2 border-white/30 text-white font-bold rounded-full hover:bg-white/10 transition-colors text-sm uppercase tracking-wider"
-            >
-              Get In Touch
-            </Link>
+            />
           </div>
         </div>
       </section>

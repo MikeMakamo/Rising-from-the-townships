@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import InquiryModalTrigger from '../components/InquiryModalTrigger';
 import {
   filterDescriptions,
   filterEntrepreneurs,
@@ -191,12 +192,15 @@ export default function EntrepreneursPage() {
             request with the person pre-selected in the contact form.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/contact?subject=Book%20an%20Entrepreneur"
+            <InquiryModalTrigger
+              label="General Booking Enquiry"
+              subject="Book an Entrepreneur"
+              recipient="bookings"
+              modalTitle="Book an RFTT Entrepreneur"
+              modalDescription="Tell us about your event, institution, or programme and we will recommend the right entrepreneur and format."
+              defaultMessage="I would like to book an RFTT entrepreneur and discuss the best fit for my audience or event."
               className="px-8 py-4 bg-brand-red text-white font-bold rounded-full hover:bg-brand-red-dark transition-colors text-sm uppercase tracking-wider"
-            >
-              General Booking Enquiry
-            </Link>
+            />
             <Link
               href="/about"
               className="px-8 py-4 border-2 border-brand-dark/20 text-brand-dark font-bold rounded-full hover:bg-brand-dark hover:text-white transition-colors text-sm uppercase tracking-wider"

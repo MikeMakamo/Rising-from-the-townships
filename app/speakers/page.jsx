@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import InquiryModalTrigger from '../components/InquiryModalTrigger';
 
 export const metadata = {
   title: 'Speakers & Engagements',
@@ -275,12 +276,15 @@ export default function SpeakersPage() {
             Ready to bring research-backed, lived-experience thought leadership to your next event?
             Submit your brief and let us curate the perfect engagement.
           </p>
-          <Link
-            href="/contact"
+          <InquiryModalTrigger
+            label="Contact Us for Booking"
+            subject="Speaking Enquiry"
+            recipient="bookings"
+            modalTitle="Book a Speaker"
+            modalDescription="Send your brief and we will help curate the right RFTT speaker or engagement format for your audience."
+            defaultMessage="I would like to book an RFTT speaker and discuss the event brief, audience, and objectives."
             className="inline-block px-8 py-4 bg-brand-red text-white font-bold rounded-full hover:bg-brand-red-dark transition-colors text-sm uppercase tracking-wider"
-          >
-            Contact Us for Booking
-          </Link>
+          />
         </div>
       </section>
     </>

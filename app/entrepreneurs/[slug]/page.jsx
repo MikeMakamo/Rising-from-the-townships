@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import InquiryModalTrigger from '../../components/InquiryModalTrigger';
 import {
   entrepreneurs,
-  getBookingHref,
   getEntrepreneurBySlug,
   getInitials,
 } from '../data';
@@ -174,12 +174,17 @@ export default async function EntrepreneurProfilePage({ params }) {
                     the request is received.
                   </p>
                 </div>
-                <Link
-                  href={getBookingHref(entrepreneur)}
+                <InquiryModalTrigger
+                  label="Request Booking"
+                  subject="Book an Entrepreneur"
+                  recipient="bookings"
+                  modalTitle={`Invite ${entrepreneur.name}`}
+                  modalDescription="Share your event brief, institution, or audience and we will follow up on availability and engagement fit."
+                  contextLabel="Entrepreneur"
+                  contextValue={entrepreneur.name}
+                  defaultMessage={`I would like to book ${entrepreneur.name} from ${entrepreneur.company}. Please share availability, engagement formats, and booking requirements.`}
                   className="block w-full text-center px-6 py-4 rounded-full bg-brand-red text-white font-bold hover:bg-brand-red-dark transition-colors text-sm uppercase tracking-wider mb-4"
-                >
-                  Request Booking
-                </Link>
+                />
                 <a
                   href="mailto:rathu@risingfromthetownship.co.za"
                   className="block w-full text-center px-6 py-4 rounded-full border border-white/20 text-white font-bold hover:bg-white/10 transition-colors text-sm uppercase tracking-wider mb-3"

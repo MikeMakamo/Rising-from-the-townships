@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import InquiryModalTrigger from '../components/InquiryModalTrigger';
 
 export const metadata = {
   title: 'Courses & Structured Learning',
@@ -162,12 +162,15 @@ export default function CoursesPage() {
             Every institution, corporate, and community has unique needs. Contact us to discuss
             how we can design a programme that fits your context, audience, and objectives.
           </p>
-          <Link
-            href="/contact"
+          <InquiryModalTrigger
+            label="Contact Us to Discuss"
+            subject="Programme Enquiry"
+            recipient="info"
+            modalTitle="Discuss a Tailored Programme"
+            modalDescription="Tell us about your audience, learning goals, and timeframe so we can suggest the right course or custom programme format."
+            defaultMessage="I would like to discuss a tailored RFTT programme for my organisation, institution, or community."
             className="inline-block px-8 py-4 bg-brand-red text-white font-bold rounded-full hover:bg-brand-red-dark transition-colors text-sm uppercase tracking-wider"
-          >
-            Contact Us to Discuss
-          </Link>
+          />
         </div>
       </section>
     </>

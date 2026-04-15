@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import InquiryModalTrigger from '../components/InquiryModalTrigger';
 
 export const metadata = {
   title: 'Why Partner With RFTT',
@@ -390,12 +391,15 @@ export default function PartnerPage() {
             research-backed pathway to support your entrepreneurship and
             development objectives.
           </p>
-          <Link
-            href="/contact"
+          <InquiryModalTrigger
+            label="Get in Touch"
+            subject="Partnership"
+            recipient="info"
+            modalTitle="Start a Partnership Conversation"
+            modalDescription="Share your organisation, objective, and the kind of collaboration you want to explore with RFTT."
+            defaultMessage="I would like to explore a partnership with RFTT."
             className="px-10 py-4 bg-brand-red text-white font-bold rounded-full hover:bg-brand-red-dark transition-colors text-sm uppercase tracking-wider inline-block"
-          >
-            Get in Touch
-          </Link>
+          />
         </div>
       </section>
     </>

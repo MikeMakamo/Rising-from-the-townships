@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import InquiryModalTrigger from './InquiryModalTrigger';
 
 export default function Footer() {
   return (
@@ -79,7 +80,7 @@ export default function Footer() {
               {
                 title: 'Contact',
                 links: [
-                  { href: '/contact', label: 'Get In Touch' },
+                  { kind: 'modal', label: 'Get In Touch' },
                   { href: 'tel:0100231815', label: '010 023 1815' },
                   { href: 'https://wa.me/27710481898', label: 'WhatsApp' },
                   { href: 'mailto:info@risingfromthetownship.co.za', label: 'Email Us' },
@@ -93,12 +94,24 @@ export default function Footer() {
                 <ul className="space-y-2.5">
                   {col.links.map((link) => (
                     <li key={link.label}>
-                      <Link
-                        href={link.href}
-                        className="text-sm text-brand-gray-mid hover:text-brand-red transition-colors"
-                      >
-                        {link.label}
-                      </Link>
+                      {link.kind === 'modal' ? (
+                        <InquiryModalTrigger
+                          label={link.label}
+                          subject="General Enquiry"
+                          recipient="info"
+                          modalTitle="Start a Conversation with RFTT"
+                          modalDescription="Share your enquiry here and we will route it to the right team."
+                          defaultMessage="I would like to get in touch with RFTT."
+                          className="text-sm text-brand-gray-mid hover:text-brand-red transition-colors"
+                        />
+                      ) : (
+                        <Link
+                          href={link.href}
+                          className="text-sm text-brand-gray-mid hover:text-brand-red transition-colors"
+                        >
+                          {link.label}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>

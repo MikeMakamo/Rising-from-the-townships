@@ -3,6 +3,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
+import InquiryModalTrigger from './components/InquiryModalTrigger';
+import {
+  coreServicePortfolio,
+  serviceProofStats,
+} from './data/services';
 
 function useReveal() {
   const ref = useRef(null);
@@ -101,6 +106,24 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ===== SERVICE PROOF ===== */}
+      <section className="py-10 lg:py-12 bg-brand-dark border-t border-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10">
+            {serviceProofStats.map((stat) => (
+              <div key={stat.label} className="reveal">
+                <p className="font-heading text-3xl sm:text-4xl font-bold text-white mb-2">
+                  {stat.value}
+                </p>
+                <p className="text-white/65 text-sm leading-relaxed">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ===== ABOUT SNAPSHOT WITH DR ZWANE ===== */}
       <section className="py-20 lg:py-28 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -160,6 +183,53 @@ export default function HomePage() {
                 </svg>
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== SERVICE PORTFOLIO PREVIEW ===== */}
+      <section className="py-20 lg:py-28 bg-brand-cream">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="reveal flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
+            <div className="max-w-3xl">
+              <p className="text-brand-red font-bold text-sm uppercase tracking-[0.2em] mb-4">
+                Service Portfolio
+              </p>
+              <h2 className="font-body text-3xl sm:text-4xl font-bold text-brand-dark mb-4 leading-tight">
+                Entrepreneurship education, leadership development and story-powered learning
+              </h2>
+              <p className="text-brand-gray-mid text-lg leading-relaxed">
+                RFTT helps institutions develop entrepreneurial mindsets by combining real African founder stories, entrepreneurship research, learning design and practical programme delivery.
+              </p>
+            </div>
+            <div>
+              <Link
+                href="/organisations"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-brand-red text-white font-bold rounded-full hover:bg-brand-red-dark transition-all text-sm uppercase tracking-wider"
+              >
+                Explore Services
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+            {coreServicePortfolio.map((service) => (
+              <div
+                key={service.title}
+                className="reveal rounded-[2rem] bg-white border border-brand-red/10 p-8 shadow-sm hover:shadow-lg transition-shadow"
+              >
+                <div className="w-10 h-1 bg-brand-red rounded-full mb-6" />
+                <h3 className="font-heading text-xl font-bold text-brand-dark mb-4">
+                  {service.title}
+                </h3>
+                <p className="text-brand-gray-mid text-sm leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -440,12 +510,15 @@ export default function HomePage() {
                 >
                   Partner With Us
                 </Link>
-                <Link
-                  href="/contact"
+                <InquiryModalTrigger
+                  label="Get In Touch"
+                  subject="General Enquiry"
+                  recipient="info"
+                  modalTitle="Start a Conversation with RFTT"
+                  modalDescription="Share your idea, question, or partnership interest and we will route it to the right conversation."
+                  defaultMessage="I would like to learn more about RFTT and explore a possible collaboration."
                   className="px-10 py-4 border-2 border-white/30 text-white font-bold rounded-full hover:bg-white/10 transition-all text-sm uppercase tracking-wider"
-                >
-                  Get In Touch
-                </Link>
+                />
               </div>
             </div>
           </div>

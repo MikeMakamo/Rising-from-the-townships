@@ -12,7 +12,7 @@ const navLinks = [
   {
     label: 'Solutions',
     children: [
-      { href: '/organisations', label: 'For Organisations' },
+      { href: '/organisations', label: 'Services & Solutions' },
       { href: '/partner', label: 'Why Partner With Us' },
       { href: '/speakers', label: 'Speaking' },
     ],
@@ -91,9 +91,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-3 py-2 text-sm font-bold uppercase tracking-wider transition-colors ${
-                    link.label === 'Shop' ? 'text-brand-red hover:text-brand-red-dark' : 'text-brand-gray hover:text-brand-red'
-                  }`}
+                  className="px-3 py-2 text-sm font-bold uppercase tracking-wider transition-colors text-brand-gray hover:text-brand-red"
                 >
                   {link.label}
                 </Link>

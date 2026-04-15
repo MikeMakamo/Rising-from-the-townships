@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import InquiryModalTrigger from '../components/InquiryModalTrigger';
 
 export const metadata = {
   title: 'Community',
@@ -156,12 +156,15 @@ export default function CommunityPage() {
             Whether you are an entrepreneur, educator, corporate partner, or policy maker —
             there is a place for you in the RFTT community.
           </p>
-          <Link
-            href="/contact"
+          <InquiryModalTrigger
+            label="Join the Community"
+            subject="Community Enquiry"
+            recipient="info"
+            modalTitle="Join the RFTT Community"
+            modalDescription="Share how you want to participate in the ecosystem, whether as an educator, entrepreneur, partner, or supporter."
+            defaultMessage="I would like to join the RFTT community and learn more about relevant programmes, dialogues, and collaboration opportunities."
             className="inline-block px-8 py-4 bg-brand-red text-white font-bold rounded-full hover:bg-brand-red-dark transition-colors text-sm uppercase tracking-wider"
-          >
-            Join the Community
-          </Link>
+          />
         </div>
       </section>
     </>

@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/entrepreneurs/dr-steven-zwane":{},"/entrepreneurs/themba-makamo":{},"/entrepreneurs/rita-zwane":{},"/entrepreneurs/nozipho-tshabalala":{},"/entrepreneurs/sheldon-tatchell":{},"/entrepreneurs/nomso-kana":{},"/entrepreneurs/veronica-motloutsi":{},"/entrepreneurs/tebogo-phiri":{},"/entrepreneurs/ntuthuko-shezi":{},"/entrepreneurs/candice-thurston":{},"/entrepreneurs/yamkela-khoza-tywakadi":{},"/entrepreneurs/zibusiso-mkhwanazi":{},"/entrepreneurs/lekau-sehoana":{}},"dynamicRoutes":{"/entrepreneurs/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":false,"fallbackRevalidate":false,"fallbackSourceRoute":"/entrepreneurs/[slug]","routeRegex":"^\\/entrepreneurs\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"9e9c9ad1af9a6346b5289cb5087165dd","previewModeSigningKey":"a8026434e1601bc8598c91439615f013b49638866ebeca845f43ce5fb34120ef","previewModeEncryptionKey":"015c62a8c827539964e85391b7a6c258610a8a6915b082c3e9d179fc15f8cd00"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "874eca89838c066dc9489cd937be7259",
+    "previewModeSigningKey": "a47167ad015514b1bf29a35ed248d94db031e43f452c9d9333fb24818d53a6e9",
+    "previewModeEncryptionKey": "8edce836bafb20b3b02f3d1410574c346da34f1d1caed53024d0526946be4c95"
+  }
+}
