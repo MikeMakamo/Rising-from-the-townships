@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { bookStoreUrl, bookSynopsisDownloadUrl } from '../data/book';
 
 export const metadata = { title: 'Shop' };
 
@@ -213,10 +214,22 @@ export default function ShopPage() {
                     {featuredBook.summary}
                   </p>
                   <p className="text-sm text-brand-gray-mid italic mb-6">{featuredBook.note}</p>
-                  <div className="flex items-center gap-4">
-                    <button className="px-8 py-3 bg-brand-red text-white font-bold rounded-full hover:bg-brand-red-dark transition-colors text-sm uppercase tracking-wider">
-                      Add to Cart
-                    </button>
+                  <div className="flex flex-wrap items-center gap-4">
+                    <a
+                      href={bookStoreUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-8 py-3 bg-brand-red text-white font-bold rounded-full hover:bg-brand-red-dark transition-colors text-sm uppercase tracking-wider"
+                    >
+                      Get The Book
+                    </a>
+                    <a
+                      href={bookSynopsisDownloadUrl}
+                      download
+                      className="px-8 py-3 border border-brand-dark text-brand-dark font-bold rounded-full hover:bg-brand-dark hover:text-white transition-colors text-sm uppercase tracking-wider"
+                    >
+                      Download Synopsis
+                    </a>
                     <Link
                       href="/entrepreneurs"
                       className="text-brand-red text-sm font-bold hover:underline"
@@ -314,9 +327,21 @@ export default function ShopPage() {
                 from the townships of South Africa.
               </p>
               <div className="flex flex-wrap gap-4">
-                <button className="px-8 py-4 bg-white text-brand-red font-bold rounded-full hover:bg-brand-cream transition-colors text-sm uppercase tracking-wider shadow-lg">
+                <a
+                  href={bookStoreUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-8 py-4 bg-white text-brand-red font-bold rounded-full hover:bg-brand-cream transition-colors text-sm uppercase tracking-wider shadow-lg"
+                >
                   Order Now
-                </button>
+                </a>
+                <a
+                  href={bookSynopsisDownloadUrl}
+                  download
+                  className="px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white/10 transition-colors text-sm uppercase tracking-wider"
+                >
+                  Download Synopsis
+                </a>
                 <Link
                   href="/about"
                   className="px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white/10 transition-colors text-sm uppercase tracking-wider"

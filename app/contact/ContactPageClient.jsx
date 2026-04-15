@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { bookSynopsisDownloadUrl } from '../data/book';
 
 const subjectOptions = [
   'General Enquiry',
@@ -195,6 +196,15 @@ export default function ContactPageClient({
                     >
                       Shop Now &rarr;
                     </Link>
+                    <div className="mt-2">
+                      <a
+                        href={bookSynopsisDownloadUrl}
+                        download
+                        className="text-brand-dark font-bold text-xs hover:text-brand-red transition-colors"
+                      >
+                        Download Synopsis
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>

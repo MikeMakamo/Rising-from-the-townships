@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import InquiryModalTrigger from '../components/InquiryModalTrigger';
+import { bookSynopsisDownloadUrl } from '../data/book';
 import {
   filterDescriptions,
   filterEntrepreneurs,
@@ -164,12 +165,21 @@ export default function EntrepreneursPage() {
                 Rising from the Township captures the journeys of these entrepreneurs
                 in structured, teachable case narratives.
               </p>
-              <Link
-                href="/shop"
-                className="inline-block px-8 py-4 bg-white text-brand-red font-bold rounded-full hover:bg-gray-100 transition-colors text-sm uppercase tracking-wider"
-              >
-                Get The Book
-              </Link>
+              <div className="flex flex-wrap justify-center lg:justify-start gap-4">
+                <Link
+                  href="/shop"
+                  className="inline-block px-8 py-4 bg-white text-brand-red font-bold rounded-full hover:bg-gray-100 transition-colors text-sm uppercase tracking-wider"
+                >
+                  Get The Book
+                </Link>
+                <a
+                  href={bookSynopsisDownloadUrl}
+                  download
+                  className="inline-block px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white/10 transition-colors text-sm uppercase tracking-wider"
+                >
+                  Download Synopsis
+                </a>
+              </div>
             </div>
           </div>
         </div>

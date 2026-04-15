@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import InquiryModalTrigger from './components/InquiryModalTrigger';
+import { bookSynopsisDownloadUrl } from './data/book';
 import {
   coreServicePortfolio,
   serviceProofStats,
@@ -98,12 +99,19 @@ export default function HomePage() {
 
       {/* ===== WATCH PODCAST CTA ===== */}
       <section className="py-6 bg-brand-red">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center gap-4">
-          <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+        <Link
+          href="/learn#podcasts"
+          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center gap-4 group"
+        >
+          <svg
+            className="w-6 h-6 text-white transition-transform duration-300 group-hover:scale-110"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
             <path d="M8 5v14l11-7z" />
           </svg>
           <span className="text-white font-bold text-lg">Watch Podcast</span>
-        </div>
+        </Link>
       </section>
 
       {/* ===== SERVICE PROOF ===== */}
@@ -262,15 +270,24 @@ export default function HomePage() {
               <p className="text-white/70 text-base mb-8">
                 By Dr Steven Zwane &amp; Yamkela Khoza Tywakadi
               </p>
-              <Link
-                href="/shop"
-                className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-brand-red transition-all text-sm uppercase tracking-wider"
-              >
-                Get Your Copy
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
+              <div className="flex flex-wrap justify-center lg:justify-start gap-4">
+                <Link
+                  href="/shop"
+                  className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-brand-red transition-all text-sm uppercase tracking-wider"
+                >
+                  Get Your Copy
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+                <a
+                  href={bookSynopsisDownloadUrl}
+                  download
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-white text-brand-red font-bold rounded-full hover:bg-brand-cream transition-all text-sm uppercase tracking-wider"
+                >
+                  Download Synopsis
+                </a>
+              </div>
             </div>
           </div>
         </div>

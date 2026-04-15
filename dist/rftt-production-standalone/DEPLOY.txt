@@ -1,0 +1,13 @@
+﻿RFTT Production Bundle
+
+How to run:
+1. Upload or extract this folder on the production server.
+2. From inside this folder, run: node server.js
+3. Set PORT if needed before starting.
+
+Included:
+- standalone Next.js server output
+- .next/static assets
+- public assets
+
+This bundle was built locally so the server does not need to run next build.

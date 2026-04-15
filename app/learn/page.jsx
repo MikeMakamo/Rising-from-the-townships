@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+import { bookSynopsisDownloadUrl } from '../data/book';
 import PodcastShowcase from './PodcastShowcase';
 import { articleItems, featuredBookResource, podcastItems } from './content';
 
@@ -225,13 +226,20 @@ export default function LearnPage() {
                 >
                   Explore Shop
                 </Link>
+                <a
+                  href={bookSynopsisDownloadUrl}
+                  download
+                  className="inline-flex items-center justify-center px-8 py-4 border border-brand-red text-brand-red font-bold rounded-full hover:bg-brand-red hover:text-white transition-colors text-sm uppercase tracking-[0.18em]"
+                >
+                  Download Synopsis
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 lg:py-28 bg-brand-dark">
+      <section id="podcasts" className="py-20 lg:py-28 bg-brand-dark scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-14">
             <p className="text-brand-red font-bold text-sm uppercase tracking-[0.18em] mb-2">

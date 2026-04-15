@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import InquiryModalTrigger from '../components/InquiryModalTrigger';
+import { bookSynopsisDownloadUrl } from '../data/book';
 
 export const metadata = {
   title: 'About Us',
@@ -365,12 +366,21 @@ export default function AboutPage() {
                 stories, it is the foundation on which the entire RFTT knowledge system is built
                 &mdash; bridging lived experience with academic rigour.
               </p>
-              <Link
-                href="/shop"
-                className="inline-block px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-brand-red transition-colors text-sm uppercase tracking-wider"
-              >
-                Get Your Copy
-              </Link>
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  href="/shop"
+                  className="inline-block px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-brand-red transition-colors text-sm uppercase tracking-wider"
+                >
+                  Get Your Copy
+                </Link>
+                <a
+                  href={bookSynopsisDownloadUrl}
+                  download
+                  className="inline-block px-8 py-4 bg-white text-brand-red font-bold rounded-full hover:bg-brand-cream transition-colors text-sm uppercase tracking-wider"
+                >
+                  Download Synopsis
+                </a>
+              </div>
             </div>
           </div>
         </div>
