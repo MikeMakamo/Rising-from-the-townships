@@ -31,7 +31,7 @@ export default function HomePage() {
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-top"
           poster="/images/Dr Zwane 2.jpg"
         >
           <source src="/videos/book-panel.mp4" type="video/mp4" />
