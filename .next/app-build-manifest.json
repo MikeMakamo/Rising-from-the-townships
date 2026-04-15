@@ -12,7 +12,7 @@
       "static/chunks/4bd1b696-c023c6e3521b1417.js",
       "static/chunks/255-3991756713d22f05.js",
       "static/chunks/main-app-c9edb95c400d91b8.js",
-      "static/css/d1591379b2966dbf.css",
+      "static/css/53a358e6bec5a419.css",
       "static/chunks/619-ba102abea3e3d0e4.js",
       "static/chunks/356-9980b0c7558f4347.js",
       "static/chunks/2-de7ef314806cb075.js",
@@ -47,16 +47,6 @@
       "static/chunks/2-de7ef314806cb075.js",
       "static/chunks/app/page-2ac8c0532af4f1a1.js"
     ],
-    "/entrepreneurs/[slug]/page": [
-      "static/chunks/webpack-1017649d66d1259f.js",
-      "static/chunks/4bd1b696-c023c6e3521b1417.js",
-      "static/chunks/255-3991756713d22f05.js",
-      "static/chunks/main-app-c9edb95c400d91b8.js",
-      "static/chunks/619-ba102abea3e3d0e4.js",
-      "static/chunks/356-9980b0c7558f4347.js",
-      "static/chunks/2-de7ef314806cb075.js",
-      "static/chunks/app/entrepreneurs/[slug]/page-08901d471e8cfe8d.js"
-    ],
     "/community/page": [
       "static/chunks/webpack-1017649d66d1259f.js",
       "static/chunks/4bd1b696-c023c6e3521b1417.js",
@@ -75,14 +65,6 @@
       "static/chunks/2-de7ef314806cb075.js",
       "static/chunks/app/about/page-08901d471e8cfe8d.js"
     ],
-    "/learn/page": [
-      "static/chunks/webpack-1017649d66d1259f.js",
-      "static/chunks/4bd1b696-c023c6e3521b1417.js",
-      "static/chunks/255-3991756713d22f05.js",
-      "static/chunks/main-app-c9edb95c400d91b8.js",
-      "static/chunks/619-ba102abea3e3d0e4.js",
-      "static/chunks/app/learn/page-fe0a964dda7b5c6e.js"
-    ],
     "/courses/page": [
       "static/chunks/webpack-1017649d66d1259f.js",
       "static/chunks/4bd1b696-c023c6e3521b1417.js",
@@ -90,6 +72,24 @@
       "static/chunks/main-app-c9edb95c400d91b8.js",
       "static/chunks/2-de7ef314806cb075.js",
       "static/chunks/app/courses/page-265a1303a523fd0c.js"
+    ],
+    "/entrepreneurs/[slug]/page": [
+      "static/chunks/webpack-1017649d66d1259f.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-3991756713d22f05.js",
+      "static/chunks/main-app-c9edb95c400d91b8.js",
+      "static/chunks/619-ba102abea3e3d0e4.js",
+      "static/chunks/356-9980b0c7558f4347.js",
+      "static/chunks/2-de7ef314806cb075.js",
+      "static/chunks/app/entrepreneurs/[slug]/page-08901d471e8cfe8d.js"
+    ],
+    "/learn/page": [
+      "static/chunks/webpack-1017649d66d1259f.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-3991756713d22f05.js",
+      "static/chunks/main-app-c9edb95c400d91b8.js",
+      "static/chunks/619-ba102abea3e3d0e4.js",
+      "static/chunks/app/learn/page-fe0a964dda7b5c6e.js"
     ],
     "/organisations/page": [
       "static/chunks/webpack-1017649d66d1259f.js",
@@ -110,6 +110,15 @@
       "static/chunks/2-de7ef314806cb075.js",
       "static/chunks/app/partner/page-10c051df6f2916a9.js"
     ],
+    "/shop/page": [
+      "static/chunks/webpack-1017649d66d1259f.js",
+      "static/chunks/4bd1b696-c023c6e3521b1417.js",
+      "static/chunks/255-3991756713d22f05.js",
+      "static/chunks/main-app-c9edb95c400d91b8.js",
+      "static/chunks/619-ba102abea3e3d0e4.js",
+      "static/chunks/356-9980b0c7558f4347.js",
+      "static/chunks/app/shop/page-9bdd0c7464846251.js"
+    ],
     "/speakers/page": [
       "static/chunks/webpack-1017649d66d1259f.js",
       "static/chunks/4bd1b696-c023c6e3521b1417.js",
@@ -119,15 +128,6 @@
       "static/chunks/356-9980b0c7558f4347.js",
       "static/chunks/2-de7ef314806cb075.js",
       "static/chunks/app/speakers/page-08901d471e8cfe8d.js"
-    ],
-    "/shop/page": [
-      "static/chunks/webpack-1017649d66d1259f.js",
-      "static/chunks/4bd1b696-c023c6e3521b1417.js",
-      "static/chunks/255-3991756713d22f05.js",
-      "static/chunks/main-app-c9edb95c400d91b8.js",
-      "static/chunks/619-ba102abea3e3d0e4.js",
-      "static/chunks/356-9980b0c7558f4347.js",
-      "static/chunks/app/shop/page-9bdd0c7464846251.js"
     ]
   }
 }
