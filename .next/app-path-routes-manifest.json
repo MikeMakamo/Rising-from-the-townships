@@ -3,13 +3,13 @@
   "/contact/page": "/contact",
   "/entrepreneurs/page": "/entrepreneurs",
   "/page": "/",
-  "/community/page": "/community",
-  "/learn/page": "/learn",
   "/courses/page": "/courses",
+  "/community/page": "/community",
   "/about/page": "/about",
-  "/partner/page": "/partner",
-  "/speakers/page": "/speakers",
   "/entrepreneurs/[slug]/page": "/entrepreneurs/[slug]",
+  "/learn/page": "/learn",
+  "/organisations/page": "/organisations",
+  "/partner/page": "/partner",
   "/shop/page": "/shop",
-  "/organisations/page": "/organisations"
+  "/speakers/page": "/speakers"
 }

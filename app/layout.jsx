@@ -26,6 +26,11 @@ export const metadata = {
     locale: 'en_ZA',
     type: 'website',
   },
+  icons: {
+    icon: '/images/rftt-logo.png',
+    shortcut: '/images/rftt-logo.png',
+    apple: '/images/rftt-logo.png',
+  },
 };
 
 export default function RootLayout({ children }) {
