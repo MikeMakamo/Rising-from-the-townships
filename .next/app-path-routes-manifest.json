@@ -5,11 +5,11 @@
   "/page": "/",
   "/courses/page": "/courses",
   "/community/page": "/community",
-  "/about/page": "/about",
-  "/entrepreneurs/[slug]/page": "/entrepreneurs/[slug]",
   "/learn/page": "/learn",
-  "/organisations/page": "/organisations",
+  "/about/page": "/about",
   "/partner/page": "/partner",
   "/shop/page": "/shop",
-  "/speakers/page": "/speakers"
+  "/speakers/page": "/speakers",
+  "/entrepreneurs/[slug]/page": "/entrepreneurs/[slug]",
+  "/organisations/page": "/organisations"
 }
