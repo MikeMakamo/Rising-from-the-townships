@@ -86,6 +86,12 @@ const intersections = [
   'Youth Entrepreneurial Intention-to-Action Research',
 ];
 
+const synopsisHighlights = [
+  '10 inspiring South African entrepreneur journeys',
+  'Township enterprise stories turned into structured learning',
+  'The foundation of the wider RFTT knowledge system',
+];
+
 export default function AboutPage() {
   return (
     <>
@@ -121,92 +127,63 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Platform Purpose */}
-      <section className="py-20 lg:py-28">
+      {/* Book Synopsis */}
+      <section className="py-20 lg:py-28 bg-brand-red">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <p className="text-brand-red font-bold text-sm uppercase tracking-wider mb-2">
-              Platform Purpose
-            </p>
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-brand-dark mb-6">
-              Codifying Township Enterprise Into{' '}
-              <span className="text-brand-red">Scalable Systems</span>
-            </h2>
-            <p className="text-brand-gray-mid text-lg leading-relaxed">
-              RFTT is a knowledge creation and entrepreneurship education platform that codifies
-              township enterprise journeys into structured, research-informed systems. We convert
-              lived experience into frameworks that can be taught, scaled, and institutionalised.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {knowledgeOutputs.map((item) => (
-              <div
-                key={item.title}
-                className="bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-shadow"
-              >
-                <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-red/10 text-brand-red mb-4">
-                  {item.icon}
-                </span>
-                <h3 className="font-heading text-lg font-bold mb-2">{item.title}</h3>
-                <p className="text-brand-gray-mid text-sm leading-relaxed">{item.desc}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="flex justify-center">
+              <div className="relative w-full max-w-lg aspect-[4/3] drop-shadow-2xl">
+                <Image
+                  src="/images/books/RFTT_Book_Mockup_2_V7.jpg"
+                  alt="Rising from the Township - Open book front and back spread"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
 
-      {/* The Transition */}
-      <section className="py-20 lg:py-28 bg-brand-dark">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <p className="text-brand-red font-bold text-sm uppercase tracking-wider mb-2">
-              The Transition
-            </p>
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white">
-              From Inspiration to <span className="text-brand-red">Impact</span>
-            </h2>
-          </div>
+            <div>
+              <p className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-white/70">
+                Book Synopsis
+              </p>
+              <h2 className="mb-4 font-heading text-3xl font-bold text-white sm:text-4xl">
+                The Book That Introduces the RFTT Story
+              </h2>
+              <p className="mb-2 font-heading text-xl font-bold leading-snug text-white">
+                Rising from the Township &mdash; Inspiring Stories of South African Entrepreneurs
+              </p>
+              <p className="mb-6 text-base text-white/80">
+                By Dr Steven Zwane &amp; Yamkela Khoza Tywakadi
+              </p>
 
-          {/* Stepper - Desktop */}
-          <div className="hidden md:flex items-start justify-between relative">
-            {/* Connecting line */}
-            <div className="absolute top-6 left-[12.5%] right-[12.5%] h-0.5 bg-brand-red/20" />
-            <div className="absolute top-6 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-brand-red via-brand-red/60 to-brand-red/20" />
+              
 
-            {transitionSteps.map((step) => (
-              <div key={step.number} className="relative flex flex-col items-center text-center w-1/4 px-4">
-                <div className="w-12 h-12 rounded-full bg-brand-red flex items-center justify-center text-white font-bold text-sm z-10">
-                  {step.number}
-                </div>
-                <h3 className="font-heading text-lg font-bold text-white mt-4 mb-2">
-                  {step.label}
-                </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{step.desc}</p>
+              <p className="mb-4 text-base leading-relaxed text-white/90">
+                Rising From the Township is not just a collection of feel-good stories from successful business leaders, with no practical tools of how they built their empires. Rather, it is an essential read for anyone seeking actionable and practical strategies to build a thriving business.
+
+Meet ten inspiring business moguls from both townships and rural areas: Themba Makamo of Vaya Footwear, who redefines local pride with his booming footwear brand, and Sheldon Tatchell of Legends Barbershop, who is revolutionising the haircutting industry. From the innovative Ntuthuko Shezi to the visionary Nozipho Tshabalala and the pioneering Candice Thurston, each story is a testament to resilience, creativity, and the indomitable spirit forged in the townships and rural areas of South Africa.
+              </p>
+              <p className="mb-8 text-base leading-relaxed text-white/90">
+               The book is the brainchild of Dr Steven Zwane, who, upon meeting Yamkela at a conference in Cape Town, shared his vision for the project. With Yamkela’s expertise in publishing and her talent as a prolific writer, their collaboration brought the project to life. Their shared passion for telling stories of resilience and entrepreneurship led to the creation of a work that has become more than just a book; it is a movement, celebrating the ingenuity of South African entrepreneurs and offering hope and mentorship for future leaders.
+              </p>
+
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  href="/shop"
+                  className="inline-block rounded-full border-2 border-white px-8 py-4 text-sm font-bold uppercase tracking-wider text-white transition-colors hover:bg-white hover:text-brand-red"
+                >
+                  Get Your Copy
+                </Link>
+                <a
+                  href={bookSynopsisDownloadUrl}
+                  download
+                  className="inline-block rounded-full bg-white px-8 py-4 text-sm font-bold uppercase tracking-wider text-brand-red transition-colors hover:bg-brand-cream"
+                >
+                  Download Synopsis
+                </a>
               </div>
-            ))}
-          </div>
-
-          {/* Stepper - Mobile */}
-          <div className="md:hidden space-y-8">
-            {transitionSteps.map((step, i) => (
-              <div key={step.number} className="flex gap-4">
-                <div className="flex flex-col items-center">
-                  <div className="w-10 h-10 rounded-full bg-brand-red flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-                    {step.number}
-                  </div>
-                  {i < transitionSteps.length - 1 && (
-                    <div className="w-0.5 flex-1 bg-brand-red/20 mt-2" />
-                  )}
-                </div>
-                <div className="pb-8">
-                  <h3 className="font-heading text-lg font-bold text-white mb-1">
-                    {step.label}
-                  </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">{step.desc}</p>
-                </div>
-              </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
@@ -328,60 +305,91 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* The Book Section */}
-      <section className="py-20 lg:py-28 bg-brand-red">
+      {/* Platform Purpose */}
+      <section className="py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Book Mockup - Left */}
-            <div className="flex justify-center">
-              <div className="relative w-full max-w-lg aspect-[4/3] drop-shadow-2xl">
-                <Image
-                  src="/images/books/RFTT_Book_Mockup_2_V7.jpg"
-                  alt="Rising from the Township - Open book front and back spread"
-                  fill
-                  className="object-contain"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-              </div>
-            </div>
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <p className="text-brand-red font-bold text-sm uppercase tracking-wider mb-2">
+              Platform Purpose
+            </p>
+            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-brand-dark mb-6">
+              Codifying Township Enterprise Into{' '}
+              <span className="text-brand-red">Scalable Systems</span>
+            </h2>
+            <p className="text-brand-gray-mid text-lg leading-relaxed">
+              RFTT is a knowledge creation and entrepreneurship education platform that codifies
+              township enterprise journeys into structured, research-informed systems. We convert
+              lived experience into frameworks that can be taught, scaled, and institutionalised.
+            </p>
+          </div>
 
-            {/* Book Details - Right */}
-            <div>
-              <p className="text-white/70 font-bold text-sm uppercase tracking-[0.2em] mb-4">
-                The Book
-              </p>
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white mb-4">
-                The Book That Started It All
-              </h2>
-              <p className="text-white text-xl font-heading font-bold leading-snug mb-2">
-                Rising from the Township &mdash; Inspiring Stories of South African Entrepreneurs
-              </p>
-              <p className="text-white/80 text-base mb-6">
-                By Dr Steven Zwane &amp; Yamkela Khoza Tywakadi
-              </p>
-              <p className="text-white/90 text-base leading-relaxed mb-8">
-                This book codifies 10 real township enterprise journeys into compelling narratives
-                that reveal the resilience, ingenuity, and strategic thinking behind South
-                Africa&apos;s most inspiring grassroots entrepreneurs. More than a collection of
-                stories, it is the foundation on which the entire RFTT knowledge system is built
-                &mdash; bridging lived experience with academic rigour.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <Link
-                  href="/shop"
-                  className="inline-block px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-brand-red transition-colors text-sm uppercase tracking-wider"
-                >
-                  Get Your Copy
-                </Link>
-                <a
-                  href={bookSynopsisDownloadUrl}
-                  download
-                  className="inline-block px-8 py-4 bg-white text-brand-red font-bold rounded-full hover:bg-brand-cream transition-colors text-sm uppercase tracking-wider"
-                >
-                  Download Synopsis
-                </a>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {knowledgeOutputs.map((item) => (
+              <div
+                key={item.title}
+                className="bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-shadow"
+              >
+                <span className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-brand-red/10 text-brand-red mb-4">
+                  {item.icon}
+                </span>
+                <h3 className="font-heading text-lg font-bold mb-2">{item.title}</h3>
+                <p className="text-brand-gray-mid text-sm leading-relaxed">{item.desc}</p>
               </div>
-            </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* The Transition */}
+      <section className="py-20 lg:py-28 bg-brand-dark">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <p className="text-brand-red font-bold text-sm uppercase tracking-wider mb-2">
+              The Transition
+            </p>
+            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white">
+              From Inspiration to <span className="text-brand-red">Impact</span>
+            </h2>
+          </div>
+
+          {/* Stepper - Desktop */}
+          <div className="hidden md:flex items-start justify-between relative">
+            <div className="absolute top-6 left-[12.5%] right-[12.5%] h-0.5 bg-brand-red/20" />
+            <div className="absolute top-6 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-brand-red via-brand-red/60 to-brand-red/20" />
+
+            {transitionSteps.map((step) => (
+              <div key={step.number} className="relative flex flex-col items-center text-center w-1/4 px-4">
+                <div className="w-12 h-12 rounded-full bg-brand-red flex items-center justify-center text-white font-bold text-sm z-10">
+                  {step.number}
+                </div>
+                <h3 className="font-heading text-lg font-bold text-white mt-4 mb-2">
+                  {step.label}
+                </h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{step.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Stepper - Mobile */}
+          <div className="md:hidden space-y-8">
+            {transitionSteps.map((step, i) => (
+              <div key={step.number} className="flex gap-4">
+                <div className="flex flex-col items-center">
+                  <div className="w-10 h-10 rounded-full bg-brand-red flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                    {step.number}
+                  </div>
+                  {i < transitionSteps.length - 1 && (
+                    <div className="w-0.5 flex-1 bg-brand-red/20 mt-2" />
+                  )}
+                </div>
+                <div className="pb-8">
+                  <h3 className="font-heading text-lg font-bold text-white mb-1">
+                    {step.label}
+                  </h3>
+                  <p className="text-gray-400 text-sm leading-relaxed">{step.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -4,12 +4,12 @@
   "/entrepreneurs/page": "/entrepreneurs",
   "/page": "/",
   "/community/page": "/community",
-  "/about/page": "/about",
-  "/courses/page": "/courses",
-  "/entrepreneurs/[slug]/page": "/entrepreneurs/[slug]",
   "/learn/page": "/learn",
-  "/organisations/page": "/organisations",
+  "/courses/page": "/courses",
+  "/about/page": "/about",
   "/partner/page": "/partner",
+  "/speakers/page": "/speakers",
+  "/entrepreneurs/[slug]/page": "/entrepreneurs/[slug]",
   "/shop/page": "/shop",
-  "/speakers/page": "/speakers"
+  "/organisations/page": "/organisations"
 }
