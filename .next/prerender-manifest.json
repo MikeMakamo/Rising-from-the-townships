@@ -482,6 +482,54 @@
         "x-next-revalidate-tag-token"
       ]
     },
+    "/entrepreneurs": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/entrepreneurs",
+      "dataRoute": "/entrepreneurs.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
+    "/speakers": {
+      "experimentalBypassFor": [
+        {
+          "type": "header",
+          "key": "next-action"
+        },
+        {
+          "type": "header",
+          "key": "content-type",
+          "value": "multipart/form-data;.*"
+        }
+      ],
+      "initialRevalidateSeconds": false,
+      "srcRoute": "/speakers",
+      "dataRoute": "/speakers.rsc",
+      "allowHeader": [
+        "host",
+        "x-matched-path",
+        "x-prerender-revalidate",
+        "x-prerender-revalidate-if-generated",
+        "x-next-revalidated-tags",
+        "x-next-revalidate-tag-token"
+      ]
+    },
     "/partner": {
       "experimentalBypassFor": [
         {
@@ -529,54 +577,6 @@
         "x-next-revalidated-tags",
         "x-next-revalidate-tag-token"
       ]
-    },
-    "/speakers": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/speakers",
-      "dataRoute": "/speakers.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
-    },
-    "/entrepreneurs": {
-      "experimentalBypassFor": [
-        {
-          "type": "header",
-          "key": "next-action"
-        },
-        {
-          "type": "header",
-          "key": "content-type",
-          "value": "multipart/form-data;.*"
-        }
-      ],
-      "initialRevalidateSeconds": false,
-      "srcRoute": "/entrepreneurs",
-      "dataRoute": "/entrepreneurs.rsc",
-      "allowHeader": [
-        "host",
-        "x-matched-path",
-        "x-prerender-revalidate",
-        "x-prerender-revalidate-if-generated",
-        "x-next-revalidated-tags",
-        "x-next-revalidate-tag-token"
-      ]
     }
   },
   "dynamicRoutes": {
@@ -608,8 +608,8 @@
   },
   "notFoundRoutes": [],
   "preview": {
-    "previewModeId": "48544e449392aa2830d022fbee53720a",
-    "previewModeSigningKey": "9f02e796cc49e647fce8e8a77e128a0415fe2cf42aca21739b29ad2cd1b01213",
-    "previewModeEncryptionKey": "16c78aaaf01a655849b312a500de4b3584a8416c318aa31217e6a341f87aee33"
+    "previewModeId": "721b530ff662d08707f967da0c521832",
+    "previewModeSigningKey": "94c70e18f4c8a72870704a57f65fa577f84aad5d6b18f2999e0a7994d5104edc",
+    "previewModeEncryptionKey": "393dbfe536a93176384083dcd47405c10f68a1b11a8fe78ba5ec17f74cff26c2"
   }
 }

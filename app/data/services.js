@@ -78,7 +78,7 @@ export const whoWeServe = [
 ];
 
 export const popularFormats = [
-  'One-day entrepreneurship mindset pilots',
+  'One-day entrepreneurship mindset workshops',
   'Multi-session masterclass series',
   'Guest lectures and keynote talks',
   'Founder story sessions and panels',

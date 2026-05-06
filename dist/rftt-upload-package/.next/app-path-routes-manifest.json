@@ -1,0 +1,15 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/contact/page": "/contact",
+  "/entrepreneurs/page": "/entrepreneurs",
+  "/page": "/",
+  "/community/page": "/community",
+  "/courses/page": "/courses",
+  "/entrepreneurs/[slug]/page": "/entrepreneurs/[slug]",
+  "/organisations/page": "/organisations",
+  "/about/page": "/about",
+  "/speakers/page": "/speakers",
+  "/learn/page": "/learn",
+  "/partner/page": "/partner",
+  "/shop/page": "/shop"
+}
