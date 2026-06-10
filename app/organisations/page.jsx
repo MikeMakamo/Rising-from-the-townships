@@ -448,7 +448,7 @@ export default function OrganisationsPage() {
                   {serviceLead.email}
                 </a>
                 <a
-                  href="tel:+27117714000"
+                  href="tel:0100231815"
                   className="block text-white hover:text-brand-red transition-colors"
                 >
                   {serviceLead.phone}

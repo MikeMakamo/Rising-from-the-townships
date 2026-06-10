@@ -114,5 +114,5 @@ export const serviceLead = {
   title: 'Senior Lecturer, Gordon Institute of Business Science',
   secondaryTitle: 'Founder: Youth Leadership & Entrepreneurship Development (YLED)',
   email: 'ZwaneS@gibs.co.za',
-  phone: '+27 11 771 4000',
+  phone: '010 023 1815',
 };

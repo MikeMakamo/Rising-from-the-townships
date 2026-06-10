@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import { bookSynopsisDownloadUrl } from '../data/book';
 
 const subjectOptions = [
@@ -21,11 +22,12 @@ const defaultForm = {
   message: '',
 };
 
-export default function ContactPageClient({
-  requestedEntrepreneur,
-  requestedCompany,
-  requestedSubject,
-}) {
+export default function ContactPageClient() {
+  const searchParams = useSearchParams();
+  const requestedEntrepreneur = searchParams.get('entrepreneur') || '';
+  const requestedCompany = searchParams.get('company') || '';
+  const requestedSubject =
+    searchParams.get('subject') || (requestedEntrepreneur ? 'Book an Entrepreneur' : '');
   const [form, setForm] = useState(defaultForm);
   const [submitted, setSubmitted] = useState(false);
 

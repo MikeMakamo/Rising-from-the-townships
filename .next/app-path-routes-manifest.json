@@ -1,15 +1,15 @@
 {
   "/_not-found/page": "/_not-found",
   "/contact/page": "/contact",
-  "/entrepreneurs/page": "/entrepreneurs",
   "/page": "/",
-  "/community/page": "/community",
-  "/courses/page": "/courses",
-  "/entrepreneurs/[slug]/page": "/entrepreneurs/[slug]",
-  "/organisations/page": "/organisations",
-  "/about/page": "/about",
-  "/speakers/page": "/speakers",
+  "/entrepreneurs/page": "/entrepreneurs",
   "/learn/page": "/learn",
-  "/partner/page": "/partner",
-  "/shop/page": "/shop"
+  "/about/page": "/about",
+  "/community/page": "/community",
+  "/organisations/page": "/organisations",
+  "/courses/page": "/courses",
+  "/shop/page": "/shop",
+  "/entrepreneurs/[slug]/page": "/entrepreneurs/[slug]",
+  "/speakers/page": "/speakers",
+  "/partner/page": "/partner"
 }

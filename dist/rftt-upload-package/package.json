@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "dev:webpack": "next dev",
-    "build": "node -e \"require('fs').rmSync('.next',{ recursive: true, force: true })\" && next build",
+    "build": "node -e \"require('fs').rmSync('.next',{ recursive: true, force: true })\" && next build && node scripts/patch-routes-manifest.js",
     "start": "node server.js",
     "lint": "next lint"
   },

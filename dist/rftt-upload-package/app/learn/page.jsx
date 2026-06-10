@@ -2,7 +2,12 @@ import Link from 'next/link';
 
 import { bookSynopsisDownloadUrl } from '../data/book';
 import PodcastShowcase from './PodcastShowcase';
-import { articleItems, featuredBookResource, podcastItems } from './content';
+import {
+  articleItems,
+  externalLectureResource,
+  featuredBookResource,
+  podcastItems,
+} from './content';
 
 export const metadata = { title: 'Learn' };
 
@@ -256,6 +261,41 @@ export default function LearnPage() {
           </div>
 
           <PodcastShowcase podcasts={podcastItems} />
+
+          <div className="mt-12 bg-white/5 border border-white/10 rounded-[2rem] overflow-hidden">
+            <div className="grid lg:grid-cols-[280px_minmax(0,1fr)] items-stretch">
+              <div className="relative min-h-[220px] bg-black/20">
+                <img
+                  src={externalLectureResource.image}
+                  alt={externalLectureResource.title}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-7 sm:p-8 lg:p-10">
+                <p className="text-brand-red font-bold text-xs uppercase tracking-[0.2em] mb-3">
+                  External Lecture Recording
+                </p>
+                <h3 className="font-heading text-2xl sm:text-3xl font-bold text-white leading-tight mb-3">
+                  {externalLectureResource.title}
+                </h3>
+                <p className="text-gray-300 text-sm uppercase tracking-[0.18em] font-bold mb-4">
+                  {externalLectureResource.source}
+                </p>
+                <p className="text-gray-300 text-base leading-relaxed mb-6">
+                  {externalLectureResource.note}
+                </p>
+                <a
+                  href={externalLectureResource.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-brand-red text-white font-bold rounded-full hover:bg-brand-red-dark transition-colors text-sm uppercase tracking-[0.18em]"
+                >
+                  {externalLectureResource.ctaLabel}
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </>

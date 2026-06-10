@@ -50,11 +50,11 @@ const strategicDomains = [
     tagline:
       'Move beyond CSR compliance into structured, measurable ecosystem engagement.',
     description:
-      'RFTT helps corporates embed authentic township enterprise insight into their development strategies, creating shared value that serves business objectives and community impact simultaneously.',
+      'RFTT helps corporates embed authentic township enterprise insights into their development strategies, creating shared value that serves business objectives and community impact simultaneously.',
     items: [
       'Enterprise & Supplier Development alignment',
       'Youth employability integration',
-      'Township market insight and intelligence',
+      'Township market insights and intelligence',
       'Measurable ecosystem impact reporting',
     ],
   },
@@ -375,7 +375,7 @@ export default function OrganisationsPage() {
               Why RFTT
             </p>
             <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-dark mb-6">
-              Why institutions choose this approach
+              Why institutions choose Our approach
             </h2>
           </div>
 
@@ -448,7 +448,7 @@ export default function OrganisationsPage() {
                   {serviceLead.email}
                 </a>
                 <a
-                  href="tel:+27117714000"
+                  href="tel:0100231815"
                   className="block text-white hover:text-brand-red transition-colors"
                 >
                   {serviceLead.phone}

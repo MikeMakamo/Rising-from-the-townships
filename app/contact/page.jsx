@@ -1,18 +1,10 @@
+import { Suspense } from 'react';
 import ContactPageClient from './ContactPageClient';
 
-export default async function ContactPage({ searchParams }) {
-  const resolvedSearchParams = await searchParams;
-  const requestedEntrepreneur = resolvedSearchParams?.entrepreneur || '';
-  const requestedCompany = resolvedSearchParams?.company || '';
-  const requestedSubject =
-    resolvedSearchParams?.subject ||
-    (requestedEntrepreneur ? 'Book an Entrepreneur' : '');
-
+export default function ContactPage() {
   return (
-    <ContactPageClient
-      requestedEntrepreneur={requestedEntrepreneur}
-      requestedCompany={requestedCompany}
-      requestedSubject={requestedSubject}
-    />
+    <Suspense fallback={null}>
+      <ContactPageClient />
+    </Suspense>
   );
 }

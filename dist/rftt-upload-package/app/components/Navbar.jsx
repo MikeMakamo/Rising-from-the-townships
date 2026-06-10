@@ -87,6 +87,20 @@ export default function Navbar() {
     };
   }, [mobileOpen]);
 
+  const isActiveRoute = (href) => {
+    if (!href) {
+      return false;
+    }
+
+    if (href === '/') {
+      return pathname === '/';
+    }
+
+    return pathname === href || pathname.startsWith(`${href}/`);
+  };
+
+  const isDropdownActive = (children) => children?.some((child) => isActiveRoute(child.href));
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -117,7 +131,11 @@ export default function Navbar() {
                 >
                   <button
                     type="button"
-                    className="flex items-center gap-1 px-3 py-2 text-sm font-bold uppercase tracking-wider text-brand-gray transition-colors hover:text-brand-red"
+                    className={`flex items-center gap-1 px-3 py-2 text-sm font-bold uppercase tracking-wider transition-colors ${
+                      isDropdownActive(link.children)
+                        ? 'text-brand-red'
+                        : 'text-brand-gray hover:text-brand-red'
+                    }`}
                   >
                     {link.label}
                     <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -130,7 +148,11 @@ export default function Navbar() {
                         <Link
                           key={child.href}
                           href={child.href}
-                          className="block px-4 py-2.5 text-sm text-brand-gray transition-colors hover:bg-brand-red-pale hover:text-brand-red"
+                          className={`block px-4 py-2.5 text-sm transition-colors hover:bg-brand-red-pale hover:text-brand-red ${
+                            isActiveRoute(child.href)
+                              ? 'bg-brand-red-pale text-brand-red'
+                              : 'text-brand-gray'
+                          }`}
                         >
                           {child.label}
                         </Link>
@@ -142,7 +164,11 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="px-3 py-2 text-sm font-bold uppercase tracking-wider text-brand-gray transition-colors hover:text-brand-red"
+                  className={`px-3 py-2 text-sm font-bold uppercase tracking-wider transition-colors ${
+                    isActiveRoute(link.href)
+                      ? 'text-brand-red'
+                      : 'text-brand-gray hover:text-brand-red'
+                  }`}
                 >
                   {link.label}
                 </Link>
@@ -203,7 +229,11 @@ export default function Navbar() {
                       key={child.href}
                       href={child.href}
                       prefetch={false}
-                      className="block px-6 py-2.5 text-sm text-brand-gray-mid transition-colors hover:text-brand-red"
+                      className={`block px-6 py-2.5 text-sm transition-colors hover:text-brand-red ${
+                        isActiveRoute(child.href)
+                          ? 'text-brand-red font-bold'
+                          : 'text-brand-gray-mid'
+                      }`}
                       onClick={() => setMobileOpen(false)}
                     >
                       {child.label}
@@ -215,7 +245,11 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   prefetch={false}
-                  className="block px-3 py-2.5 text-sm font-bold uppercase tracking-wider text-brand-dark transition-colors hover:text-brand-red"
+                  className={`block px-3 py-2.5 text-sm font-bold uppercase tracking-wider transition-colors hover:text-brand-red ${
+                    isActiveRoute(link.href)
+                      ? 'text-brand-red'
+                      : 'text-brand-dark'
+                  }`}
                   onClick={() => setMobileOpen(false)}
                 >
                   {link.label}

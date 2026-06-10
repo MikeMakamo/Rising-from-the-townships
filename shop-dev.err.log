@@ -1,0 +1,42 @@
+
+<--- Last few GCs --->
+
+
+
+#
+# Fatal JavaScript out of memory: MemoryChunk allocation failed during deserialization.
+#
+----- Native stack trace -----
+
+ 1: 00007FF64CA1DCAD node::MultiIsolatePlatform::DisposeIsolate+5245
+ 2: 00007FF64DD27276 v8::base::FatalOOM+54
+ 3: 00007FF64D6F1916 v8::Function::NewInstance+390
+ 4: 00007FF64D4F3C17 v8::base::AddressSpaceReservation::AddressSpaceReservation+320967
+ 5: 00007FF64D4A62BA v8::base::AddressSpaceReservation::AddressSpaceReservation+3178
+ 6: 00007FF64D4A637C v8::base::AddressSpaceReservation::AddressSpaceReservation+3372
+ 7: 00007FF64D4A6C6B v8::base::AddressSpaceReservation::AddressSpaceReservation+5659
+ 8: 00007FF64D47E0C1 v8::Platform::SystemClockTimeMillis+430321
+ 9: 00007FF64D4E3A43 v8::base::AddressSpaceReservation::AddressSpaceReservation+254963
+10: 00007FF64D4E37AE v8::base::AddressSpaceReservation::AddressSpaceReservation+254302
+11: 00007FF64D4E2598 v8::base::AddressSpaceReservation::AddressSpaceReservation+249672
+12: 00007FF64D4E251A v8::base::AddressSpaceReservation::AddressSpaceReservation+249546
+13: 00007FF64D50BD35 X509_STORE_set_cleanup+4885
+14: 00007FF64D0AA278 v8::internal::Version::GetSONAME+242584
+15: 00007FF64D0A804C v8::internal::Version::GetSONAME+233836
+16: 00007FF64D0AF29E v8::internal::Version::GetSONAME+263102
+17: 00007FF64D0A8A7D v8::internal::Version::GetSONAME+236445
+18: 00007FF64D086644 v8::internal::Version::GetSONAME+96100
+19: 00007FF64D4FBEEE v8::base::AddressSpaceReservation::AddressSpaceReservation+354462
+20: 00007FF64D4FBC41 v8::base::AddressSpaceReservation::AddressSpaceReservation+353777
+21: 00007FF64D0870C3 v8::internal::Version::GetSONAME+98787
+22: 00007FF64D58E37C v8::base::CPU::has_sse41+92380
+23: 00007FF64D58E762 v8::base::CPU::has_sse41+93378
+24: 00007FF64D08CCC3 v8::internal::Version::GetSONAME+122339
+25: 00007FF64D71CB26 v8::Isolate::Initialize+662
+26: 00007FF64CBC2AAD node::SetIsolateUpForNode+669
+27: 00007FF64CA5552E node::MultiIsolatePlatform::DisposeIsolate+232702
+28: 00007FF64CB14EB4 node::Start+1012
+29: 00007FF64D9FACF2 AES_cbc_encrypt+8994
+30: 00007FF64E84AE34 v8::base::UnsignedDivisionByConstant<unsigned __int64>+2826324
+31: 00007FF9BF13E8D7 BaseThreadInitThunk+23
+32: 00007FF9C024C3FC RtlUserThreadStart+44

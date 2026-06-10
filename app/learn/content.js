@@ -218,3 +218,12 @@ export const podcastItems = [
     thumbnail: 'https://i.ytimg.com/vi/R2Bk6rL-RDs/hqdefault.jpg',
   },
 ];
+
+export const externalLectureResource = {
+  title: 'Dr S. Zwane Entrepreneurship Lecture',
+  source: 'NWU Nextcloud',
+  href: 'https://nextcloud.nwu.ac.za/public.php/dav/files/ByyFswFEQyXpHDd/?accept=zip',
+  image: '/images/Dr Zwane 2.jpg',
+  note: 'External lecture recording hosted on NWU Nextcloud.',
+  ctaLabel: 'Open Lecture Recording',
+};

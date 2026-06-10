@@ -209,7 +209,7 @@ export const entrepreneurs = [
     name: 'Yamkela Khoza Tywakadi',
     title: 'Founder',
     company: 'Blank Page Books',
-    image: null,
+    image: '/images/entrepreneurs/Yamkela Khoza Tywakadi.jpg',
     summary:
       'Publishing entrepreneur and author using storytelling to advance African identity, literacy, and cultural preservation.',
     bio:
@@ -231,7 +231,7 @@ export const entrepreneurs = [
     name: 'Zibusiso Mkhwanazi',
     title: 'Co-Founder',
     company: 'AVATAR',
-    image: null,
+    image: '/images/entrepreneurs/Zibusiso Mkhwanazi.jpg',
     summary:
       'Award-winning entrepreneur and digital innovator helping shape how brands connect with audiences across Africa.',
     bio:
@@ -246,7 +246,7 @@ export const entrepreneurs = [
     name: 'Lekau Sehoana',
     title: 'Founder',
     company: 'Drip Footwear',
-    image: null,
+    image: '/images/entrepreneurs/Lekau Sehoana.jpg',
     summary:
       'Entrepreneur and designer who turned a childhood sneaker hobby into one of South Africa\'s most recognised lifestyle brands.',
     bio:

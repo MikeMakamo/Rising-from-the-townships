@@ -55,7 +55,7 @@ const knowledgeOutputs = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
       </svg>
     ),
-    title: 'University Curriculum',
+    title: 'higher education curriuculum',
     desc: 'Full course modules, teaching notes, and assessment frameworks for higher education institutions.',
   },
   {
@@ -271,8 +271,8 @@ Meet ten inspiring business moguls from both townships and rural areas: Themba M
                       Published Case Studies
                     </h3>
                     <p className="text-brand-gray-mid text-sm leading-relaxed">
-                      His cases have been featured in <span className="font-bold text-brand-dark">Ivey Publishing</span> and{' '}
-                      <span className="font-bold text-brand-dark">Emerald Emerging Markets Case Studies</span>,
+                      His cases have been published in <span className="font-bold text-brand-dark">Ivey Publishing</span> and{' '}
+                      <span className="font-bold text-brand-dark">Harvard Publishing</span>,
                       making African township entrepreneurship accessible to global university classrooms.
                     </p>
                   </div>
@@ -352,7 +352,6 @@ Meet ten inspiring business moguls from both townships and rural areas: Themba M
             </h2>
           </div>
 
-          {/* Stepper - Desktop */}
           <div className="hidden md:flex items-start justify-between relative">
             <div className="absolute top-6 left-[12.5%] right-[12.5%] h-0.5 bg-brand-red/20" />
             <div className="absolute top-6 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-brand-red via-brand-red/60 to-brand-red/20" />
@@ -370,7 +369,6 @@ Meet ten inspiring business moguls from both townships and rural areas: Themba M
             ))}
           </div>
 
-          {/* Stepper - Mobile */}
           <div className="md:hidden space-y-8">
             {transitionSteps.map((step, i) => (
               <div key={step.number} className="flex gap-4">

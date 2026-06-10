@@ -171,7 +171,7 @@ export default function HomePage() {
                 {[
                   'Academic case studies',
                   'High school entrepreneurship models',
-                  'University curriculum material',
+                    'higher education curriuculum',
                   'Corporate shared value frameworks',
                   'Policy-relevant research',
                 ].map((item) => (
@@ -319,11 +319,11 @@ export default function HomePage() {
               ))}
             </div>
 
-            <div className="mt-14 inline-flex items-center gap-2 sm:gap-4 bg-white/10 backdrop-blur-sm rounded-full px-6 sm:px-10 py-4">
+            <div className="mt-14 hidden min-[430px]:inline-flex items-center gap-1 sm:gap-2 lg:gap-4 bg-white/10 backdrop-blur-sm rounded-full px-4 sm:px-6 lg:px-10 py-3 sm:py-4 max-w-full whitespace-nowrap">
               {['Inspiration', 'Instruction', 'Institutionalisation', 'Impact'].map((step, i) => (
-                <span key={step} className="flex items-center gap-2 sm:gap-4">
-                  <span className="text-white font-bold text-xs sm:text-sm">{step}</span>
-                  {i < 3 && <span className="text-brand-red font-bold">&rarr;</span>}
+                <span key={step} className="flex items-center gap-1 sm:gap-2 lg:gap-4">
+                  <span className="text-white font-bold text-[10px] sm:text-xs lg:text-sm">{step}</span>
+                  {i < 3 && <span className="text-brand-red font-bold text-[10px] sm:text-xs lg:text-sm">&rarr;</span>}
                 </span>
               ))}
             </div>
